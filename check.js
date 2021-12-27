@@ -5,7 +5,7 @@ context = document.querySelector('canvas').getContext('2d')
 context.canvas.height = 180
 context.canvas.width = 320
 
-let zy = rishabisgay;
+
 
 player = {
   height: 32,
