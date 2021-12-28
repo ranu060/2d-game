@@ -1,11 +1,9 @@
 var context, controller, player, loop
 
-context = document.querySelector('canvas').getContext('2d')
+// context = document.querySelector('canvas').getContext('2d')
 
-context.canvas.height = 180
-context.canvas.width = 320
-
-let zy = rishabisgay;
+// context.canvas.height = 180
+// context.canvas.width = 320
 
 player = {
   height: 32,
