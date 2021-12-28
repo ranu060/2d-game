@@ -3,7 +3,7 @@ body {
 }
 #container {
     position: absolute;
-    width: 1920px;
+    width: 500px;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -12,8 +12,8 @@ body {
 
 #canvas1 {
     position: relative;
-    width: 1920px;
-    height: 1200px;
+    width: 500px;
+    height: 500px;
 }
 #slider {
     width: 100%;
