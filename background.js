@@ -15,6 +15,8 @@ const backgroundLayer4 = new Image();
 backgroundLayer4.src = 'layer4.png';
 const backgroundLayer5 = new Image();
 backgroundLayer5.src = 'layer5.png';
+const backgroundLayer6 = new Image();
+backgroundLayer6.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
 
 
 const slider = document.getElementById('slider');
@@ -55,8 +57,9 @@ const layer2 = new Layer(backgroundLayer2, 0.4);
 const layer3 = new Layer(backgroundLayer3, 0.6);
 const layer4 = new Layer(backgroundLayer4, 0.8);
 const layer5 = new Layer(backgroundLayer5, 1);
+const layer6 =  new Layer(backgroundLayer6, 1);
 
-const gameObjects = [layer1, layer2, layer3, layer4, layer5];
+const gameObjects = [layer1, layer2, layer3, layer4, layer5, layer6];
 
 function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);

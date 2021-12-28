@@ -1,11 +1,15 @@
+
+
 let img = new Image();
 img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+// let img = new Image();
+// img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
 img.onload = function() {
   init();
 };
 
-// let canvas = document.querySelector('canvas');
-// let ctx = canvas.getContext('2d');
+let canvas = document.querySelector('canvas');
+let ctx = canvas.getContext('2d');
 
 const scale = 2;
 const width = 16;
@@ -13,8 +17,7 @@ const height = 18;
 const scaledWidth = scale * width;
 const scaledHeight = scale * height;
 
-// const backgroundLayer5 = new Image();
-// backgroundLayer5.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+
 
 function drawFrame(frameX, frameY, canvasX, canvasY) {
   ctx.drawImage(img,
