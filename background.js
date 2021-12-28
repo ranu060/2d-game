@@ -1,7 +1,7 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 1920;
-const CANVAS_HEIGHT = canvas.height = 1080;
+const CANVAS_HEIGHT = canvas.height = 1200;
 let gameSpeed = 5;
 //let gameFrame = 0;
 
