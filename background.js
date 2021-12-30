@@ -1,9 +1,9 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 1920;
-const CANVAS_HEIGHT = canvas.height = 1200;
+const CANVAS_HEIGHT = canvas.height = 1080;
 let gameSpeed = 5;
-//let gameFrame = 0;
+
 
 const backgroundLayer1 = new Image();
 backgroundLayer1.src = 'layer1.png';
@@ -42,7 +42,6 @@ class Layer {
             this.x = 0;
         }
         this.x = Math.floor(this.x - this.speed);
-        //this.x = gameFrame * this.speed % this.width;
     }
     draw(){
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
