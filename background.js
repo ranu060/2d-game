@@ -6,17 +6,22 @@ let gameSpeed = 5;
 //let gameFrame = 0;
 
 const backgroundLayer1 = new Image();
-backgroundLayer1.src = 'layer1.png';
+backgroundLayer1.src = 'images/layer1.png';
 const backgroundLayer2 = new Image();
-backgroundLayer2.src = 'layer2.png';
+backgroundLayer2.src = 'images/layer2.png';
 const backgroundLayer3 = new Image();
-backgroundLayer3.src = 'layer3.png';
+backgroundLayer3.src = 'images/layer3.png';
 const backgroundLayer4 = new Image();
-backgroundLayer4.src = 'layer4.png';
+backgroundLayer4.src = 'images/layer4.png';
 const backgroundLayer5 = new Image();
-backgroundLayer5.src = 'layer5.png';
-const backgroundLayer6 = new Image();
-backgroundLayer6.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+backgroundLayer5.src = 'images/layer5.png';
+
+// const backgroundLayer6 = new Image();
+// backgroundLayer6.height = '50px';
+// backgroundLayer6.width = '50px';
+// backgroundLayer6.src = 'running_guy.png';
+
+
 
 
 const slider = document.getElementById('slider');
@@ -52,14 +57,14 @@ class Layer {
 
     }
 }
-const layer1 = new Layer(backgroundLayer1, 0.2);
-const layer2 = new Layer(backgroundLayer2, 0.4);
-const layer3 = new Layer(backgroundLayer3, 0.6);
-const layer4 = new Layer(backgroundLayer4, 0.8);
-const layer5 = new Layer(backgroundLayer5, 1);
-const layer6 =  new Layer(backgroundLayer6, 1);
+const layer1 = new Layer(backgroundLayer1, 0);
+const layer2 = new Layer(backgroundLayer2, 0);
+const layer3 = new Layer(backgroundLayer3, 0);
+const layer4 = new Layer(backgroundLayer4, 0);
+const layer5 = new Layer(backgroundLayer5, 0);
+// const layer6 =  new Layer(backgroundLayer6, 0);
 
-const gameObjects = [layer1, layer2, layer3, layer4, layer5, layer6];
+const gameObjects = [layer1, layer2, layer3, layer4, layer5];
 
 function animate(){
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -69,4 +74,7 @@ function animate(){
     });
     requestAnimationFrame(animate);
 };
+
+
 animate();
+// ctx.drawImage(backgroundLayer6, 100, 100, 100, 100);
