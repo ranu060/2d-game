@@ -66,15 +66,13 @@ const layer5 = new Layer(backgroundLayer5, 0);
 
 const gameObjects = [layer1, layer2, layer3, layer4, layer5];
 
-function animate(){
-    ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+function background_movement(){
     gameObjects.forEach(object => {
         object.update();
         object.draw();
     });
-    requestAnimationFrame(animate);
+    // requestAnimationFrame(background_movement);
 };
 
 
-animate();
 // ctx.drawImage(backgroundLayer6, 100, 100, 100, 100);

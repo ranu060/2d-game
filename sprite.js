@@ -54,3 +54,11 @@
 
 const playerImage = new Image();
 playerImage.src = 'images/running_guy.png';
+const sprite_width = 500;
+const sprite_height = 500;
+
+function show_guy(){
+
+//ctx.drawImage(playerImage, sx, sy, sw, sh, dx, dy, dw, dh)
+  ctx.drawImage(playerImage, 0, 0, sprite_width, sprite_height, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
+}
