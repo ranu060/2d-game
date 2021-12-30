@@ -56,12 +56,11 @@
 
 
 
-
-const canvas = document.getElementById('canvas1');
-const ctx = canvas.getContext('2d');
-const CANVAS_WIDTH = canvas.width = 1920;
-const CANVAS_HEIGHT = canvas.height = 1200;
-let gameSpeed = 5;
+// const canvas = document.getElementById('canvas1');
+// const ctx = canvas.getContext('2d');
+// const CANVAS_WIDTH = canvas.width = 1920;
+// const CANVAS_HEIGHT = canvas.height = 1200;
+// let gameSpeed = 5;
 
 const playerImage = new Image();
 playerImage.src = 'images/running_guy.png';
@@ -73,10 +72,10 @@ const sprite_height = 1000;
 //   ctx.drawImage(playerImage, 0, 0, sprite_width, sprite_height, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 // }
 
-function animate(){
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+function show_guy(){
+  // ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.fillRect(100,100,100,100)
   ctx.drawImage(playerImage, CANVAS_WIDTH/2, CANVAS_HEIGHT/2)
-  requestAnimationFrame(animate);
+  requestAnimationFrame(show_guy);
 };
-animate();
+show_guy()

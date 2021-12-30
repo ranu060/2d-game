@@ -57,11 +57,11 @@ class Layer {
 
     }
 }
-const layer1 = new Layer(backgroundLayer1, 0);
-const layer2 = new Layer(backgroundLayer2, 0);
-const layer3 = new Layer(backgroundLayer3, 0);
-const layer4 = new Layer(backgroundLayer4, 0);
-const layer5 = new Layer(backgroundLayer5, 0);
+const layer1 = new Layer(backgroundLayer1, .2);
+const layer2 = new Layer(backgroundLayer2, .3);
+const layer3 = new Layer(backgroundLayer3, .8);
+const layer4 = new Layer(backgroundLayer4, .8);
+const layer5 = new Layer(backgroundLayer5, 1);
 // const layer6 =  new Layer(backgroundLayer6, 0);
 
 const gameObjects = [layer1, layer2, layer3, layer4, layer5];
@@ -71,8 +71,10 @@ function background_movement(){
         object.update();
         object.draw();
     });
-    // requestAnimationFrame(background_movement);
+    requestAnimationFrame(background_movement);
+    
 };
+background_movement()
 
 
 // ctx.drawImage(backgroundLayer6, 100, 100, 100, 100);

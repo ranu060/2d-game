@@ -6,6 +6,6 @@ function animate(){
     // sprite movement
     show_guy();
 
-
-    requestAnimationFrame(background_movement);
+    requestAnimationFrame(animate);
 };
+animate()
