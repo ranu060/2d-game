@@ -1,7 +1,7 @@
-var context, controller, player, loop
 
-// context = document.querySelector('canvas').getContext('2d')
+var context, controller, rectangle, loop;
 
+<<<<<<< HEAD
 context.canvas.height = 180
 context.canvas.width = 320
 
@@ -14,67 +14,117 @@ player = {
   y: 0,
   y_velocity: 0,
 }
+=======
+
+context = document.querySelector("canvas").getContext("2d");
+// context.canvas.height = 180;
+// context.canvas.width = 320;
+
+rectangle = {
+
+  height:64,
+  jumping:true,
+  width:64,
+  x:144, // center of the canvas
+  x_velocity:0,
+  y:0,
+  y_velocity:0
+
+};
+>>>>>>> dfae422cae69bf8d7ec4a8a14cea82699dbdb33d
 
 controller = {
-  left: false,
-  right: false,
-  up: false,
-  keyListener: function(event) {
-    var key_state = event.type == 'keydown' ? true : false
 
-    switch (event.keyCode) {
-      case 87:
-        controller.up = key_state
-        break
-      case 68:
-        controller.right = key_state
-        break
-      case 65:
-        controller.left = key_state
-        break
+  left:false,
+  right:false,
+  up:false,
+  keyListener:function(event) {
+
+    var key_state = (event.type == "keydown")?true:false;
+
+    switch(event.keyCode) {
+
+      case 37:// left key
+        controller.left = key_state;
+      break;
+      case 38:// up key
+        controller.up = key_state;
+      break;
+      case 39:// right key
+        controller.right = key_state;
+      break;
+
     }
-  },
-}
+
+  }
+
+};
+
 loop = function() {
-  if (controller.up && player.jumping == false) {
-    player.y_velocity -= 20
-    player.jumping = true
+
+  if (controller.up && rectangle.jumping == false) {
+
+    rectangle.y_velocity -= 40;
+    rectangle.jumping = true;
+
   }
+
   if (controller.left) {
-    player.x_velocity -= 0.5 //For at "player" akselererer smooth
+
+    rectangle.x_velocity -= 1;
+
   }
+
   if (controller.right) {
-    player.x_velocity += 0.5 //For at "player" akselererer smooth
+
+    rectangle.x_velocity += 1;
+
   }
 
-  player.y_velocity += 1.5 //Gravity
-  player.x += player.x_velocity
-  player.y += player.y_velocity
-  player.x_velocity *= 0.9 //Friksjon  (må leggest til eller så synker ikke farten)
-  player.y_velocity *= 0.9 //Friksjon
+  rectangle.y_velocity += 1;// gravity
+  rectangle.x += rectangle.x_velocity;
+  rectangle.y += rectangle.y_velocity;
+  rectangle.x_velocity *= 0.9;// friction
+  rectangle.y_velocity *= 0.9;// friction
 
-  //dersom player faller til y verdien så koliderer den (bunn linjen)
-  if (player.y > 180 - 16 - 32) {
-    player.jumping = false
-    player.y = 180 - 16 - 32
-    player.y_velocity = 0
+  // if rectangle is falling below floor line
+  if (rectangle.y > 1080 - 16 - 64) {
+
+    rectangle.jumping = false;
+    rectangle.y = 1080 - 16 - 64;
+    rectangle.y_velocity = 0;
+
   }
 
-  context.fillStyle = '#202020'
-  context.fillRect(0, 0, 320, 180)
-  context.fillStyle = '#ff0000'
-  context.beginPath()
-  context.rect(player.x, player.y, player.width, player.height)
-  context.fill()
-  context.strokeStyle = '#ff0000'
-  context.lineWidth = 4
-  context.beginPath()
-  context.moveTo(0, 164)
-  context.lineTo(320, 164)
-  context.stroke()
+  // if rectangle is going off the left of the screen
+  if (rectangle.x < -64) {
 
-  window.requestAnimationFrame(loop)
-}
-window.addEventListener('keydown', controller.keyListener)
-window.addEventListener('keyup', controller.keyListener)
-window.requestAnimationFrame(loop)
+    rectangle.x = 640;
+
+  // } else if (rectangle.x > 320) {// if rectangle goes past right boundary
+
+  //   rectangle.x = -32;
+
+  }
+
+  context.fillStyle = "#202020";
+  // context.fillRect(0, 0, 320, 180);// x, y, width, height
+  context.fillStyle = "#ff0000";// hex for red
+  context.beginPath();
+  context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+  context.fill();
+  // context.strokeStyle = "#202830";
+  context.lineWidth = 4;
+  context.beginPath();
+  // context.moveTo(0, 164);
+  // context.lineTo(320, 164);
+  context.stroke();
+
+  // call update when the browser is ready to draw again
+  window.requestAnimationFrame(loop);
+
+};
+
+window.addEventListener("keydown", controller.keyListener)
+window.addEventListener("keyup", controller.keyListener);
+window.requestAnimationFrame(loop);
