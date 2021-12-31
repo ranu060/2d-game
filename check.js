@@ -2,9 +2,6 @@ var context, controller, player, loop
 
 context = document.querySelector('canvas').getContext('2d')
 
-context.canvas.height = 180
-context.canvas.width = 320
-
 player = {
   height: 32,
   jumping: true,
@@ -61,7 +58,7 @@ loop = function() {
   }
 
   context.fillStyle = '#202020'
-  context.fillRect(0, 0, 320, 180)
+  // context.fillRect(0, 0, 320, 180)
   context.fillStyle = '#ff0000'
   context.beginPath()
   context.rect(player.x, player.y, player.width, player.height)

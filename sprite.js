@@ -67,15 +67,11 @@ playerImage.src = 'images/running_guy.png';
 const sprite_width = 1000;
 const sprite_height = 1000;
 
-// function show_guy(){
-// //ctx.drawImage(playerImage, sx, sy, sw, sh, dx, dy, dw, dh)
-//   ctx.drawImage(playerImage, 0, 0, sprite_width, sprite_height, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
-// }
 
 function show_guy(){
-  // ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.fillRect(100,100,100,100)
-  ctx.drawImage(playerImage, CANVAS_WIDTH/2, CANVAS_HEIGHT/2)
+  //ctx.drawImage(playerImage, sx, sy, sw, sh, dx, dy, dw, dh)
+  ctx.drawImage(playerImage, 0, 0, sprite_width, sprite_height, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
   requestAnimationFrame(show_guy);
 };
 show_guy()
