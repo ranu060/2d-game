@@ -56,11 +56,11 @@ class Layer {
 
     }
 }
-const layer1 = new Layer(backgroundLayer1, .2);
-const layer2 = new Layer(backgroundLayer2, .3);
-const layer3 = new Layer(backgroundLayer3, .8);
-const layer4 = new Layer(backgroundLayer4, .8);
-const layer5 = new Layer(backgroundLayer5, 1);
+const layer1 = new Layer(backgroundLayer1, gameSpeed);
+const layer2 = new Layer(backgroundLayer2, gameSpeed);
+const layer3 = new Layer(backgroundLayer3, gameSpeed);
+const layer4 = new Layer(backgroundLayer4, gameSpeed);
+const layer5 = new Layer(backgroundLayer5, gameSpeed);
 // const layer6 =  new Layer(backgroundLayer6, 0);
 
 const gameObjects = [layer1, layer2, layer3, layer4, layer5];
