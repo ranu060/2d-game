@@ -1,24 +1,6 @@
 
-<<<<<<< HEAD
-context = document.querySelector('canvas').getContext('2d')
-=======
 var context, controller, rectangle, loop;
 
-<<<<<<< HEAD
-context.canvas.height = 180
-context.canvas.width = 320
->>>>>>> main
-
-player = {
-  height: 32,
-  jumping: true,
-  width: 32,
-  x: 144,
-  x_velocity: 0,
-  y: 0,
-  y_velocity: 0,
-}
-=======
 
 context = document.querySelector("canvas").getContext("2d");
 // context.canvas.height = 180;
@@ -35,7 +17,6 @@ rectangle = {
   y_velocity:0
 
 };
->>>>>>> dfae422cae69bf8d7ec4a8a14cea82699dbdb33d
 
 controller = {
 
@@ -111,26 +92,6 @@ loop = function() {
 
   }
 
-<<<<<<< HEAD
-  context.fillStyle = '#202020'
-  // context.fillRect(0, 0, 320, 180)
-  context.fillStyle = '#ff0000'
-  context.beginPath()
-  context.rect(player.x, player.y, player.width, player.height)
-  context.fill()
-  context.strokeStyle = '#ff0000'
-  context.lineWidth = 4
-  context.beginPath()
-  context.moveTo(0, 164)
-  context.lineTo(320, 164)
-  context.stroke()
-
-  window.requestAnimationFrame(loop)
-}
-window.addEventListener('keydown', controller.keyListener)
-window.addEventListener('keyup', controller.keyListener)
-window.requestAnimationFrame(loop)
-=======
   context.fillStyle = "#202020";
   // context.fillRect(0, 0, 320, 180);// x, y, width, height
   context.fillStyle = "#ff0000";// hex for red
@@ -152,4 +113,3 @@ window.requestAnimationFrame(loop)
 window.addEventListener("keydown", controller.keyListener)
 window.addEventListener("keyup", controller.keyListener);
 window.requestAnimationFrame(loop);
->>>>>>> main
