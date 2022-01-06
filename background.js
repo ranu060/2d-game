@@ -22,16 +22,16 @@ backgroundLayer5.src = 'images/layer5.png';
 // backgroundLayer6.src = 'running_guy.png';
 
 
+// const slider = document.getElementById('slider');
+// slider.value = gameSpeed;
+// const showGameSpeed = document.getElementById('showGameSpeed');
+// showGameSpeed.innerHTML = gameSpeed;
 
-
-const slider = document.getElementById('slider');
-slider.value = gameSpeed;
-const showGameSpeed = document.getElementById('showGameSpeed');
-showGameSpeed.innerHTML = gameSpeed;
-slider.addEventListener('change', function(e){
-    gameSpeed = e.target.value;
-    showGameSpeed.innerHTML = e.target.value;
-});
+// GAMESPEED CHANGER FUNC
+    // slider.addEventListener('change', function(e){
+    //     gameSpeed = e.target.value;
+    //     showGameSpeed.innerHTML = e.target.value;
+    // });
 
 class Layer {
     constructor(image, speedModifier){
@@ -53,14 +53,14 @@ class Layer {
     draw(){
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
-
     }
 }
-const layer1 = new Layer(backgroundLayer1, gameSpeed);
-const layer2 = new Layer(backgroundLayer2, gameSpeed);
-const layer3 = new Layer(backgroundLayer3, gameSpeed);
-const layer4 = new Layer(backgroundLayer4, gameSpeed);
-const layer5 = new Layer(backgroundLayer5, gameSpeed);
+
+const layer1 = new Layer(backgroundLayer1, gameSpeed * .1);
+const layer2 = new Layer(backgroundLayer2, gameSpeed * .1);
+const layer3 = new Layer(backgroundLayer3, gameSpeed * .2);
+const layer4 = new Layer(backgroundLayer4, gameSpeed * .2);
+const layer5 = new Layer(backgroundLayer5, gameSpeed * .9);
 // const layer6 =  new Layer(backgroundLayer6, 0);
 
 const gameObjects = [layer1, layer2, layer3, layer4, layer5];
