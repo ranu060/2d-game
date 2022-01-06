@@ -64,9 +64,9 @@
 
 const playerImage = new Image();
 playerImage.src = 'images/running_guy.png';
-const sprite_width = (1000/11.5) ;
+const sprite_width = (1000/12.5) ;
 const sprite_height = 1000/8;
-bruh = 1
+bruh = 3
 
 
 function show_guy(){

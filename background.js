@@ -55,13 +55,19 @@ class Layer {
         ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
     }
 }
+// gameSpeed = x_velocity
+const layer1 = new Layer(backgroundLayer1, gameSpeed);
+const layer2 = new Layer(backgroundLayer2, gameSpeed);
+const layer3 = new Layer(backgroundLayer3, gameSpeed);
+const layer4 = new Layer(backgroundLayer4, gameSpeed);
+const layer5 = new Layer(backgroundLayer5, gameSpeed);
 
-const layer1 = new Layer(backgroundLayer1, gameSpeed * .1);
-const layer2 = new Layer(backgroundLayer2, gameSpeed * .1);
-const layer3 = new Layer(backgroundLayer3, gameSpeed * .2);
-const layer4 = new Layer(backgroundLayer4, gameSpeed * .2);
-const layer5 = new Layer(backgroundLayer5, gameSpeed * .9);
-// const layer6 =  new Layer(backgroundLayer6, 0);
+// const layer1 = new Layer(backgroundLayer1, gameSpeed * .1);
+// const layer2 = new Layer(backgroundLayer2, gameSpeed * .1);
+// const layer3 = new Layer(backgroundLayer3, gameSpeed * .2);
+// const layer4 = new Layer(backgroundLayer4, gameSpeed * .2);
+// const layer5 = new Layer(backgroundLayer5, gameSpeed * 1);
+
 
 const gameObjects = [layer1, layer2, layer3, layer4, layer5];
 

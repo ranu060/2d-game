@@ -6,7 +6,7 @@ context = document.querySelector("canvas").getContext("2d");
 rectangle = { height:64,
               jumping:true,
               width:64,
-              x:144, y:0,
+              x:CANVAS_WIDTH/2 - 64, y:0,
               x_velocity:0, y_velocity:0 
             };
 
@@ -66,7 +66,7 @@ loop = function() {
   }
 
   rectangle.y_velocity += 3; // gravity
-  rectangle.x += rectangle.x_velocity;
+  // rectangle.x += rectangle.x_velocity;
   rectangle.y += rectangle.y_velocity;
   gameSpeed += rectangle.x_velocity * .01;
 
@@ -97,11 +97,8 @@ loop = function() {
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
   context.fill();
-  // context.strokeStyle = "#202830";
   context.lineWidth = 4;
   context.beginPath();
-  // context.moveTo(0, 164);
-  // context.lineTo(320, 164);
   context.stroke();
 
   // call update when the browser is ready to draw again
