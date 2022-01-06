@@ -53,7 +53,7 @@ controller = {
 loop = function() {
 
   if (controller.up && rectangle.jumping == false) {
-    rectangle.y_velocity -= 50;
+    rectangle.y_velocity -= 60; // jump height
     rectangle.jumping = true;
   }
 
@@ -65,7 +65,7 @@ loop = function() {
     rectangle.x_velocity += 2;
   }
 
-  rectangle.y_velocity += 2; // gravity
+  rectangle.y_velocity += 3; // gravity
   rectangle.x += rectangle.x_velocity;
   rectangle.y += rectangle.y_velocity;
   gameSpeed += rectangle.x_velocity * .01;
@@ -106,7 +106,6 @@ loop = function() {
 
   // call update when the browser is ready to draw again
   window.requestAnimationFrame(loop);
-
 };
 
 window.addEventListener("keydown", controller.keyListener)
