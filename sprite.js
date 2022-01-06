@@ -64,14 +64,15 @@
 
 const playerImage = new Image();
 playerImage.src = 'images/running_guy.png';
-const sprite_width = 1000;
-const sprite_height = 1000;
+const sprite_width = (1000/11.5) ;
+const sprite_height = 1000/8;
+bruh = 1
 
 
 function show_guy(){
 
   //ctx.drawImage(playerImage, sx, sy, sw, sh, dx, dy, dw, dh)
-  ctx.drawImage(playerImage, 0, 0, sprite_width, sprite_height, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
+  ctx.drawImage(playerImage, sprite_width * bruh, 0, sprite_width, sprite_height, rectangle.x, rectangle.y, 64, 64)
   requestAnimationFrame(show_guy);
 };
 show_guy()

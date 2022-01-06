@@ -73,7 +73,7 @@ loop = function() {
   rectangle.x_velocity *= 0.9;// friction
   rectangle.y_velocity *= 0.9;// friction
   gameSpeed *= .97;// backgournd friction
-  // if (rectangle.x_velocity == 0) gameSpeed = 0;
+  if (rectangle.x_velocity == 0) gameSpeed = 0; // makes background stop w box
 
   // if rectangle is falling below floor line
   if (rectangle.y > 1080 - 16 - 96) {
